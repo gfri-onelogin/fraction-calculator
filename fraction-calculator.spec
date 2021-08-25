@@ -4,7 +4,7 @@
 block_cipher = None
 
 
-a = Analysis(['src/fraction-calculator.py'],
+a = Analysis(['src/main.py'],
              pathex=['/Users/gfri/onelogin/fraction-calculator'],
              binaries=[],
              datas=[],

@@ -1,3 +1,6 @@
+import argparse
+
+from src.constants import DESCRIPTION
 from src.operation_handler import OperationHandler
 from src.parser import Parser
 """
@@ -5,7 +8,7 @@ This is the entry point into the application and handles command-line input
 parsing.
 """
 def main():
-    parser = Parser()
+    parser = Parser(argparse.ArgumentParser(description=DESCRIPTION))
 
     operands_and_operators = parser.operands_and_operators
 

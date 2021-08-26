@@ -20,10 +20,16 @@ class Parser:
         self.parser.add_argument('input', nargs='+', help='the input of the form "<operand> <operator> <operand>"')
         self.args = self._parse()
 
-        self.operands_and_operators = map(self._parse_argument, self.args)
+        self.operands_and_operators = list(map(self._parse_argument, self.args))
 
     def _parse(self):
-        return vars(self.parser.parse_args())['input']
+        args = vars(self.parser.parse_args())['input']
+
+        # This indicates that the user has passed in a quoted string.
+        if (len(args) == 1):
+            return args[0].split()
+        else:
+            return args
 
     def _validate_input(self, input):
         raise NotImplementedError('purple')

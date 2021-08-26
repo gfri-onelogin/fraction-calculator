@@ -15,4 +15,18 @@ COMPOUND_FRACTION_PAIRS = [
     { 'arg': '-1_19/6', 'expected': Fraction(-25, 6) }
 ]
 
+HANDLER_INPUTS = [
+    { 'input': [Fraction(3, 2), '+', Fraction(-3, 2)], 'expected': '0' },
+    { 'input': [Fraction(3, 2), '-', Fraction(-3, 2)], 'expected': '3' },
+    { 'input': [Fraction(3, 2), '*', Fraction(-3, 2)], 'expected': '-2_1/4' },
+    { 'input': [Fraction(3, 2), '/', Fraction(-3, 2)], 'expected': '-1' },
+    { 'input': [Fraction(9, 2), '+', Fraction(1, 17)], 'expected': '4_19/34' },
+    { 'input': [Fraction(1, 1), '+', Fraction(3, 1)], 'expected': '4' },
+    { 'input': [Fraction(1, 1), '-', Fraction(3, 1)], 'expected': '-2' },
+    { 'input': [Fraction(1, 1), '*', Fraction(3, 1)], 'expected': '3' },
+    { 'input': [Fraction(1, 1), '/', Fraction(3, 1)], 'expected': '1/3' },
+    { 'input': [Fraction(1, 1), '+', Fraction(0, 1)], 'expected': '1' },
+    { 'input': [Fraction(1, 1), '-', Fraction(0, 1)], 'expected': '1' }
+]
+
 OPERATORS = [ '+', '-', '*', '/' ]

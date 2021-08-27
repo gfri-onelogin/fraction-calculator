@@ -27,7 +27,7 @@ that can be downloaded and run. This file includes all necessary dependencies an
 be able to run in any *nix-style shell.
 
 ```
-> ./fraction-calculator 9/2 - -1_3/4
+./fraction-calculator 9/2 - -1_3/4
 6_1/4
 ```
 
@@ -40,18 +40,18 @@ the file and click Open. You'll be asked if you actually want to use it.
 
 You'll also need to ensure that it's executable:
 ```
-> chmod 755 /path/to/where/you/downloaded/fraction-calculator
+chmod 755 /path/to/where/you/downloaded/fraction-calculator
 ```
 
-Note: It's way easier to just [clone the repo](#-how-do-i-use-it).
+Note: It's way easier to just [clone the repo](#how-do-i-use-it).
 
 ## Run Script
 Using the run script just abstracts the python command to run a module away from the user. This
 is not the preferred method of testing the app because I don't know what version of python you're
-rocking.
+rocking or if you have all the required dependencies.
 
 ```
-> ./run.sh
+./run.sh
 ```
 
 # Testing
@@ -69,7 +69,7 @@ If you must, you'll need to ensure that pytest is installed on your system and r
 pytest tests/test_*
 ```
 
-It's not elegant, but this project is 3 days old and will never see production.
+It's not elegant, but this project isn't meant for production.
 
 # Building An Updated Executable
 I decided to use [`pyinstaller`](https://www.pyinstaller.org) because it's really easy to use

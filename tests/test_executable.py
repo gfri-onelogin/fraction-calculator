@@ -13,6 +13,12 @@ class TestExecutable:
 
     Note: We're not actually verifying that we're getting the correct output. That's
     something for another time. This just verifies that the program is exiting normally.
+
+    Look into `subprocess.run` for these tests instead of `os.system`. `subprocess.run`
+    returns a `CompletedProcess` object that contains the exit code and the output when
+    `capture_output=True`.
+
+    https://docs.python.org/3/library/subprocess.html#subprocess.run
     '''
 
     def test_entrypoint(self):

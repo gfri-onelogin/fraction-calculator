@@ -64,7 +64,8 @@ disappointed that I'm going to have to wait for their barrel-aged Brew Tang Clan
 but definitely more appropriate to colder weather (IMO).
 
 ## You Really Want To Run The Tests
-If you must, you'll need to ensure that pytest is installed on your system and run:
+If you must, you'll need to ensure that you've updated the executable by running `./build.sh`, and
+that pytest is installed on your machine. Then run:
 ```
 pytest tests/test_*
 ```
